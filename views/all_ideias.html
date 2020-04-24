@@ -1,0 +1,19 @@
+{% for idea in ideas %}
+    <div class="idea">
+        <img src="{{idea.image}}" alt="Imagem de {{idea.title}}">
+        <div class="content">
+            <h3>{{idea.title}}</h3>
+            <p>{{idea.category}}</p>
+            <div class="description">
+                {{idea.description}}
+            </div>
+            <a href="{{idea.link}}" target="_blank">Ir para a ideia</a>
+        </div>
+        <div class="remove">
+            <form action="/delete/{{idea.id}}?_method=DELETE" method="post">
+                <input type="hidden" name="_method" value="DELETE">
+                <button></button>
+            </form>
+        </div>
+    </div>
+{% endfor %}

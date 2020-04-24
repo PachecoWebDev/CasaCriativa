@@ -1,0 +1,308 @@
+/*=================== Global ======================*/
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;900&display=swap');
+
+body{
+    background-color: #e5e5e5;
+    color: #25282B;
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body.hideScroll{
+    overflow: hidden;
+}
+
+a{
+    color: #ff5e84;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+a:hover{
+    text-decoration: underline;
+}
+
+p, .description{
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: .1px;
+}
+
+.button{
+    color: #ffffff;
+    background: #ff5e84;
+    width: 150px;
+    height: 40px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 8px 16px rgba(255, 0, 92, .16);
+}
+
+.button:hover{
+    background-color: #0984e3;
+    text-decoration: none;
+}
+
+/*================= Padrão ==================*/
+
+#container{
+    width: 80%;
+    max-width: 980px;
+    margin: 40px auto 0;
+    display: flex;
+}
+
+#intro{
+    width: 300px;
+    margin-right: 64px;
+}
+
+main{
+    margin: 32px 0;
+}
+
+#buttons{
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 32px;
+}
+
+button{
+    background: none;
+    color: #ff5e84;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    outline: none;
+    font-size: 14px;
+    line-height: 18px;
+    letter-spacing: .2px;
+}
+
+button:hover{
+    text-decoration: underline;
+}
+
+
+footer{
+    text-align: center;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 18px;
+    letter-spacing: .2px;
+    color: #777;
+}
+
+footer a{
+    opacity: .8;
+}
+
+.idea{
+    display: flex;
+    border-radius: 8px;
+    box-shadow: 0 4px 16px -8px rgba(1, 1, 1, .1);
+    background-color: #ffffff;
+    margin-bottom: 32px;
+    padding: 32px;
+    justify-content: space-between;
+}
+
+.idea img{
+    width: 60px;
+    height: 60px;
+    margin-right: 32px;
+}
+
+.idea h3{
+    margin: 0;
+}
+
+.idea p{
+    margin: 8px 0;
+    color: #777;
+}
+
+.idea .description{
+    margin: 16px 0;
+}
+
+.idea .remove button{
+    background-image: url(https://image.flaticon.com/icons/svg/426/426802.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 30px;
+    margin: 0 0 0 32px;
+}
+
+.idea .remove button:hover{
+    background-color: transparent;
+    width: 35px;
+}
+
+/* Modal */
+#modal{
+    background: #ff5e84;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    transition: 400ms;
+}
+
+#modal.addScroll{
+    overflow: auto;
+}
+
+#modal.hide{
+    opacity: 0;
+    visibility: hidden;
+}
+
+#modal .content{
+    margin-top: 5%;
+    color: #ffffff;
+}
+
+#modal .content h1{
+    text-align: center;
+    text-transform: uppercase;
+}
+
+#modal .content form{
+    width: 80%;
+    max-width: 800px;
+    margin: 0 auto 15%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+#modal .content form div:nth-child(3),
+#modal .content form div:nth-child(4),
+#modal .content form div:nth-child(5){
+    grid-column: span 2;
+}
+
+form input,
+form textarea{
+    width: 100%;
+    padding: 12px;
+    box-sizing: border-box;
+    border-radius: 5px;
+    border: 1px solid rgba(141, 25, 52, .5);
+    outline: none;
+    font-size: 16px;
+}
+
+form label{
+    font-weight: 600;
+    line-height: 32px;
+    letter-spacing: .8px;
+}
+
+form a{
+    width: 150px;
+    height: 40px;
+    background-color: #ffffff22;
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 6px;
+    align-self: end;
+    transition: 400ms;
+}
+
+form a:hover{
+    background: #fff;
+    color: #ff5e84;
+    text-decoration: none;
+}
+
+form button{
+    background: #ffffff;
+    width: 150px;
+    height: 40px;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-top: 32px;
+    grid-column: 2;
+    justify-self: end;
+    transition: 400ms;
+}
+
+form button:hover{
+    background-color: #0984e3;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+/*================ ideias.html ====================*/
+#page-ideias #container{
+    display: block;
+}
+
+#page-ideias header{
+    display: flex;
+    justify-content: space-between;
+}
+
+#page-ideias nav{
+    display: flex;
+    align-items: center;
+}
+#page-ideias nav li{
+    list-style: none;
+    margin-right: 16px;
+}
+
+#page-ideias nav li a{
+    color: #25282B;
+}
+
+#page-ideias nav li a.button{
+    color: #ffffff;
+}
+
+#page-ideias nav li:last-child{
+    margin: 0;
+}
+
+#page-ideias section#title{
+    text-align: center;
+}
+
+#page-ideias section#title p{
+    opacity: .7;
+    margin: 0;
+}
+
+#page-ideias section#title h1{
+    margin: 0;
+    font-size: 28px;
+}
+
+#page-ideias section#ideias{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+#page-ideias section#ideias .idea{
+    margin: 0;
+}
+
+#page-ideias section#title,
+#page-ideias section#ideias,
+#page-ideias footer{
+    margin-top: 64px;
+}
